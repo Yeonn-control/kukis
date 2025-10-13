@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KUKYSS — Tienda</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo">KUKYSS</div>
+    <div>
+      <div id="slogan" contenteditable="true" title="Haz doble click para editar el eslogan">El eslogan editable de tu pastelería</div>
+    </div>
+    <nav>
+      <a href="#" data-target="home" class="active">Inicio</a>
+      <a href="#" data-target="quienes">Quiénes somos</a>
+      <a href="#" data-target="comprar">Comprar</a>
+    </nav>
+  </div>
+  <div class="rightbar">
+    <div class="cart-btn" id="cartBtn" title="Abrir carrito">
+      🛒 Carrito <span class="cart-count" id="cartCount">0</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="page active">
+    <div class="hero">
+      <div id="hero-img"></div>
+      <div class="text">
+        <h2>Bienvenidos a KUKYSS</h2>
+        <p>Aquí escribe la descripción principal de tu tienda: historia breve, tipo de galletas, horarios o cualquier cosa. El texto es editable: selecciona y escribe. Mantén la voz poética y honesta.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="quienes" class="page">
+    <h2>Quiénes somos</h2>
+    <p>Información de contacto y sobre nosotros. Puedes reemplazar el contenido con tu teléfono, dirección y redes.</p>
+    <ul>
+      <li>Teléfono: <strong>+56 9 XXXXXXXX</strong></li>
+      <li>Email: <strong>kukyss@tudominio.cl</strong></li>
+      <li>Dirección: <strong>Tu calle 123, Ciudad</strong></li>
+    </ul>
+  </section>
+
+  <section id="comprar" class="page">
+    <h2>Comprar</h2>
+    <p>Haz click en "Agregar al carrito" para sumar. Las imágenes se cargan desde CSS.</p>
+
+    <div class="products" id="products">
+      <article class="card" data-id="p1" data-name="Galleta chispas" data-price="900" data-img-src="img/choco-chip.jpeg"> <div id="product-img-1" class="card-img"></div>
+        <h3>Galleta chispas</h3>
+        <p>Suave y esponjosa por dentro, dorada por fuera.</p>
+        <div class="price">$900</div>
+        <button class="add">Agregar al carrito</button>
+      </article>
+
+      <article class="card" data-id="p2" data-name="Galleta Oreo" data-price="1100" data-img-src="img/oreo.jpeg"> <div id="product-img-2" class="card-img"></div>
+        <h3>Galleta Oreo</h3>
+        <p>Relleno cremoso y contraste crujiente.</p>
+        <div class="price">$1100</div>
+        <button class="add">Agregar al carrito</button>
+      </article>
+
+      <article class="card" data-id="p3" data-name="Galleta Red Velvet" data-price="1300" data-img-src="img/red-velvet.jpeg"> <div id="product-img-3" class="card-img"></div>
+        <h3>Galleta Red Velvet</h3>
+        <p>Textura suave y color intenso, con chispas blancas.</p>
+        <div class="price">$1300</div>
+        <button class="add">Agregar al carrito</button>
+      </article>
+    </div>
+  </section>
+</main>
+
+<div class="cart-panel" id="cartPanel" aria-hidden="true">
+  <h3>Tu carrito</h3>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <strong>Total:</strong>
+    <div id="cartTotal">$0</div>
+  </div>
+</div>
+
+<footer>
+  <small>Diseñado para la tarea — modifica textos, precios e imágenes como quieras.</small>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
