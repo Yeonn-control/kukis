@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KUKYSS — Tienda</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo">KUKYSS</div>
+    <div>
+      <!-- EDITA AQUÍ el eslogan: cambia el texto entre las etiquetas.
+           El eslogan ya NO es editable en la página (contenteditable fue removido). -->
+      <div id="slogan">Galleta perfecta para cada momento</div>
+    </div>
+    <nav>
+      <a href="#" data-target="home" class="active">Inicio</a>
+      <a href="#" data-target="quienes">Quiénes somos</a>
+      <a href="#" data-target="comprar">Comprar</a>
+    </nav>
+  </div>
+  <div class="rightbar">
+    <div class="cart-btn" id="cartBtn" title="Abrir carrito">
+      🛒 Carrito <span class="cart-count" id="cartCount">0</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="page active">
+    <div class="hero">
+      <div id="hero-img" class="hero-img" aria-hidden="true"></div>
+      <div class="text">
+        <h2>Bienvenidos a KUKYSS</h2>
+        <p>Es una empresa  fundada en octubre de 2025 por un equipo de emprendedores en Estación Central, Región Metropolitana. Nos especializamos en la elaboración de galletas artesanales, combinando recetas tradicionales con procesos modernos y un enfoque en la calidad.
+
+Nuestro compromiso es ofrecer productos frescos, sin conservantes, elaborados con ingredientes naturales y atención al detalle. Cada miembro del equipo aporta experiencia y pasión, lo que nos permite mantener altos estándares y una conexión cercana con nuestros clientes.
+
+Actualmente, Kukis  participa en ferias gastronómicas, colabora con cafeterías locales y proyecta su expansión a través de canales digitales, consolidándose como una marca referente en repostería artesanal en Chile.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="quienes" class="page">
+    <h2>Quiénes somos</h2>
+    <p>Información de contacto y sobre nosotros. Puedes reemplazar el contenido con tu teléfono, dirección y redes.</p>
+    <ul>
+      <li>Teléfono: <strong>+56 9 3627 2580</strong></li>
+      <li>Email: <strong>kukyss@gmail.com</strong></li>
+      <li>Dirección: <strong>Tu calle 123, Ciudad</strong></li>
+    </ul>
+  </section>
+
+  <section id="comprar" class="page">
+    <h2>Comprar</h2>
+    <p>En este apartado podrás comprar nuestras galletas</p>
+
+    <div class="products" id="products">
+      <article class="card" data-id="p1" data-name="Galleta chispas" data-price="900" data-img-src="img/choco-chip.jpeg">
+        <div id="product-img-1" class="card-img" style="background-image:url('img/choco-chip.jpeg')"></div>
+        <h3>Galleta chispas</h3>
+        <p class="prod-desc">Imagina una galleta suave y esponjosa por dentro con un exterior ligeramente crujiente y dorado. La superficie está cubierta de trozos de chocolate derretidos y pegajosos.</p>
+        <div class="price">$900</div>
+        <button class="add">Agregar al carrito</button>
+      </article>
+
+      <article class="card" data-id="p2" data-name="Galleta Oreo" data-price="1100" data-img-src="img/oreo.jpeg">
+        <div id="product-img-2" class="card-img" style="background-image:url('img/oreo.jpeg')"></div>
+        <h3>Galleta Oreo</h3>
+        <p class="prod-desc">Dos galletas crujientes que abrazan un relleno cremoso. Un clásico por su contraste de texturas y sabor.</p>
+        <div class="price">$1100</div>
+        <button class="add">Agregar al carrito</button>
+      </article>
+
+      <article class="card" data-id="p3" data-name="Galleta Red Velvet" data-price="1300" data-img-src="img/red-velvet.jpeg">
+        <div id="product-img-3" class="card-img" style="background-image:url('img/red-velvet.jpeg')"></div>
+        <h3>Galleta Red Velvet</h3>
+        <p class="prod-desc">Textura suave y color intenso, con un toque de queso crema: el placer en cada mordisco.</p>
+        <div class="price">$1300</div>
+        <button class="add">Agregar al carrito</button>
+      </article>
+    </div>
+  </section>
+</main>
+
+<div class="cart-panel" id="cartPanel" aria-hidden="true">
+  <h3>Tu carrito</h3>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <strong>Total:</strong>
+    <div id="cartTotal">$0</div>
+  </div>
+</div>
+
+<footer>
+  <small>Yeo-KUKYSS-2025</small>
+</footer>
+
+<!-- AUDIO: coloca el archivo mp3 en img/background-music.mp3 -->
+<!-- Nota: muchos navegadores bloquean autoplay; recomiendo añadir un botón play en UI si quieres autoplay. -->
+<audio id="bg-audio" src="audio/background-music.mp3" loop></audio>
+
+<script src="js/script.js"></script>
+</body>
+</html>
