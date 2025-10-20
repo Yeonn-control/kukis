@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KUKYSS — Tienda</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <img src="img/logo.jpeg" alt="Logo de KUKYSS" class="logo-img">
+    <div class="logo-text">KUKYSS</div>
+    <div id="slogan">Galleta perfecta para cada momento</div>
+    <nav>
+      <a href="#" data-target="home" class="active">Inicio</a>
+      <a href="#" data-target="quienes">Quiénes somos</a>
+      <a href="#" data-target="comprar">Comprar</a>
+    </nav>
+  </div>
+  <div class="rightbar">
+    <div class="cart-btn" id="cartBtn" title="Abrir carrito">
+      🛒 Carrito <span class="cart-count" id="cartCount">0</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="page active">
+    <div class="hero">
+      <div class="hero-img" aria-hidden="true"></div>
+      <div class="text">
+        <h2>Bienvenidos a KUKYSS</h2>
+        <p>Somos una empresa fundada en octubre de 2025 por un grupo de emprendedores en Estación Central, Región Metropolitana. Nos especializamos en galletas artesanales elaboradas con ingredientes naturales y sin conservantes, combinando recetas tradicionales con procesos modernos. Cada galleta refleja nuestro compromiso con la calidad, la frescura y el cariño por lo artesanal.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="quienes" class="page">
+    <h2>Quiénes somos</h2>
+    <ul>
+      <li>Teléfono: <strong>+56 9 3627 2580</strong></li>
+      <li>Email: <strong>kukyss@gmail.com</strong></li>
+      <li>Dirección: <strong>Av. Ecuador 4626, Estación Central</strong></li>
+    </ul>
+  </section>
+
+  <section id="comprar" class="page">
+    <h2>Comprar</h2>
+    <p>En este apartado podrás comprar nuestras galletas artesanales.</p>
+
+    <div class="products" id="products">
+      <article class="card" data-id="p1" data-name="Galleta chispas" data-price="900" data-img-src="img/choco-chip.jpeg">
+        <div class="card-img" style="background-image:url('img/choco-chip.jpeg')"></div>
+        <h3>Galleta chispas</h3>
+        <p>Suave por dentro, crujiente por fuera, con trozos de chocolate derretido.</p>
+        <div class="price">$900</div>
+        <button class="add">Agregar al carrito</button>
+      </article>
+
+      <article class="card" data-id="p2" data-name="Galleta Oreo" data-price="1100" data-img-src="img/oreo.jpeg">
+        <div class="card-img" style="background-image:url('img/oreo.jpeg')"></div>
+        <h3>Galleta Oreo</h3>
+        <p>Dos galletas crujientes con un relleno cremoso: un clásico irresistible.</p>
+        <div class="price">$1100</div>
+        <button class="add">Agregar al carrito</button>
+      </article>
+
+      <article class="card" data-id="p3" data-name="Galleta Red Velvet" data-price="1300" data-img-src="img/red-velvet.jpeg">
+        <div class="card-img" style="background-image:url('img/red-velvet.jpeg')"></div>
+        <h3>Galleta Red Velvet</h3>
+        <p>Textura suave, color intenso y un toque de queso crema. Amor en cada mordida.</p>
+        <div class="price">$1300</div>
+        <button class="add">Agregar al carrito</button>
+      </article>
+    </div>
+  </section>
+</main>
+
+<div class="cart-panel" id="cartPanel" aria-hidden="true">
+  <h3>Tu carrito</h3>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <strong>Total:</strong>
+    <div id="cartTotal">$0</div>
+  </div>
+</div>
+
+<footer>
+  <small>© Yeo — KUKYSS 2025</small>
+</footer>
+
+<!-- 🎵 AUDIO -->
+<audio id="bg-audio" src="audio/background-music.mp3" loop></audio>
+<button id="playMusicBtn">🔊 Reproducir música</button>
+
+<!-- Scripts -->
+<script src="js/script.js"></script>
+</body>
+</html>
