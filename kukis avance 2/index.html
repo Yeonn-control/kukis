@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>KUKYSS — Tienda</title>
+  <title>KUKYSS — Inicio</title>
 
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <header>
   <div class="brand">
     <img src="img/logo.jpeg" alt="Logo de KUKYSS" class="logo-img">
@@ -21,8 +22,8 @@
     <div id="slogan">Galleta perfecta para cada momento</div>
     <nav>
       <a href="#" data-target="home" class="active">Inicio</a>
-      <a href="#" data-target="quienes">Quiénes somos</a>
-      <a href="#" data-target="comprar">Comprar</a>
+      <a href="#" data-target="vision">Nuestra visión</a>
+      <a href="#" data-target="productos">Nuestros productos</a>
     </nav>
   </div>
   <div class="rightbar">
@@ -41,21 +42,38 @@
         <p>Somos una empresa fundada en octubre de 2025 por un grupo de emprendedores en Estación Central, Región Metropolitana. Nos especializamos en galletas artesanales elaboradas con ingredientes naturales y sin conservantes, combinando recetas tradicionales con procesos modernos. Cada galleta refleja nuestro compromiso con la calidad, la frescura y el cariño por lo artesanal.</p>
       </div>
     </div>
+    <h2>Productos destacados</h2>
+    <div class="products" id="homeProducts">
+      <article class="card" data-id="p1" data-name="Galleta chispas" data-price="900" data-img-src="img/choco-chip.jpeg">
+        <div class="card-img" style="background-image:url('img/choco-chip.jpeg')"></div>
+        <h3>Galleta chispas</h3>
+        <p>Suave por dentro, crujiente por fuera, con trozos de chocolate derretido.</p>
+        <div class="price">$900</div>
+      </article>
+
+      <article class="card" data-id="p2" data-name="Galleta Oreo" data-price="1100" data-img-src="img/oreo.jpeg">
+        <div class="card-img" style="background-image:url('img/oreo.jpeg')"></div>
+        <h3>Galleta Oreo</h3>
+        <p>Dos galletas crujientes con un relleno cremoso: un clásico irresistible.</p>
+        <div class="price">$1100</div>
+      </article>
+
+      <article class="card" data-id="p3" data-name="Galleta Red Velvet" data-price="1300" data-img-src="img/red-velvet.jpeg">
+        <div class="card-img" style="background-image:url('img/red-velvet.jpeg')"></div>
+        <h3>Galleta Red Velvet</h3>
+        <p>Textura suave, color intenso y un toque de queso crema. Amor en cada mordida.</p>
+        <div class="price">$1300</div>
+      </article>
+    </div>
   </section>
 
-  <section id="quienes" class="page">
-    <h2>Quiénes somos</h2>
-    <ul>
-      <li>Teléfono: <strong>+56 9 3627 2580</strong></li>
-      <li>Email: <strong>kukyss@gmail.com</strong></li>
-      <li>Dirección: <strong>Av. Ecuador 4626, Estación Central</strong></li>
-    </ul>
+  <section id="vision" class="page">
+    <h2>Nuestra visión</h2>
+    <p>Queremos ser la marca de galletas artesanales más reconocida de Chile, ofreciendo productos de alta calidad que hagan sonreír a nuestros clientes en cada mordida.</p>
   </section>
 
-  <section id="comprar" class="page">
-    <h2>Comprar</h2>
-    <p>En este apartado podrás comprar nuestras galletas artesanales.</p>
-
+  <section id="productos" class="page">
+    <h2>Nuestros productos</h2>
     <div class="products" id="products">
       <article class="card" data-id="p1" data-name="Galleta chispas" data-price="900" data-img-src="img/choco-chip.jpeg">
         <div class="card-img" style="background-image:url('img/choco-chip.jpeg')"></div>
@@ -94,6 +112,11 @@
 </div>
 
 <footer>
+  <ul>
+    <li>Teléfono: <strong>+56 9 3627 2580</strong></li>
+    <li>Email: <strong>kukyss@gmail.com</strong></li>
+    <li>Dirección: <strong>Av. Ecuador 4626, Estación Central</strong></li>
+  </ul>
   <small>© Yeo — KUKYSS 2025</small>
 </footer>
 

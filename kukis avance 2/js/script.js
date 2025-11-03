@@ -7,6 +7,9 @@ document.querySelectorAll('nav a').forEach(a => {
     const target = a.dataset.target;
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById(target).classList.add('active');
+
+    // DESHABILITAR o habilitar botones según página
+    updateAddButtons();
   });
 });
 
@@ -75,13 +78,12 @@ function updateCartUI() {
   cartTotal.textContent = formatCLP(cart.total);
   saveCart();
 
+  // Botones dentro del carrito
   cartItems.querySelectorAll('.qty-plus').forEach(b => {
     b.addEventListener('click', e => {
       const id = e.currentTarget.dataset.id;
       cart.items[id].qty++;
       updateCartUI();
-      cartBtn.classList.add('bounce');
-      setTimeout(() => cartBtn.classList.remove('bounce'), 460);
     });
   });
 
@@ -103,18 +105,56 @@ function updateCartUI() {
   });
 }
 
-// ---- Agregar productos ----
+// ---- Función para habilitar/deshabilitar botones de “Agregar” ----
+function updateAddButtons() {
+  document.querySelectorAll('.card .add').forEach(btn => {
+    const card = btn.closest('.page');
+    if (card && card.id === 'inicio') {
+      btn.disabled = true;
+      btn.title = 'No disponible en Inicio';
+      btn.style.cursor = 'not-allowed';
+    } else {
+      btn.disabled = false;
+      btn.title = '';
+      btn.style.cursor = 'pointer';
+    }
+  });
+}
+
+// ---- Agregar productos + animación 🍪 ----
 document.querySelectorAll('.card .add').forEach(btn => {
   btn.addEventListener('click', e => {
+    if (btn.disabled) return; // No hacer nada si está deshabilitado
+
     const card = e.target.closest('.card');
     const id = card.dataset.id;
     const name = card.dataset.name;
     const price = Number(card.dataset.price);
     const imgSrc = card.dataset.imgSrc;
 
+    // Agregar al carrito
     if (!cart.items[id]) cart.items[id] = { id, name, price, qty: 0, img: imgSrc };
     cart.items[id].qty++;
     updateCartUI();
+
+    // ✨ ANIMACIÓN: volar al carrito
+    const img = document.createElement('img');
+    img.src = imgSrc;
+    img.className = 'fly-img';
+    document.body.appendChild(img);
+
+    const cardRect = card.getBoundingClientRect();
+    const cartRect = cartBtn.getBoundingClientRect();
+
+    img.style.left = cardRect.left + 'px';
+    img.style.top = cardRect.top + 'px';
+
+    requestAnimationFrame(() => {
+      img.style.transform = `translate(${cartRect.left - cardRect.left}px, ${cartRect.top - cardRect.top}px) scale(0.2)`;
+      img.style.opacity = '0';
+    });
+
+    setTimeout(() => img.remove(), 1000);
   });
 });
 
@@ -135,3 +175,4 @@ playBtn.addEventListener('click', () => {
 // ---- Inicialización ----
 loadCart();
 updateCartUI();
+updateAddButtons(); // Deshabilitar botones de inicio al cargar
