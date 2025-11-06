@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KUKYSS — Inicio</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <!-- menu botón -->
+  <button id="menuBtn" aria-label="Abrir menú" class="menu-btn">☰</button>
+
+  <!-- Título centrado -->
+  <div class="header-center">
+    <h1>Bienvenidos</h1>
+    <div id="slogan">Galleta perfecta para cada momento</div>
+  </div>
+
+  <!-- Logo a la derecha -->
+  <div class="header-right">
+    <img src="img/logo.jpeg" alt="Logo de KUKYSS" class="logo-img">
+  </div>
+
+  <!-- Navegación (oculta por defecto; se abre con el botón) -->
+  <nav id="navMenu" class="nav-menu" aria-hidden="true">
+    <a href="#" data-target="home" class="active">Inicio</a>
+    <a href="#" data-target="quienes">Quiénes somos</a>
+    <a href="#" data-target="finanzas">Finanzas</a>
+    <a href="#" data-target="productos">Productos</a>
+    <a href="#" data-target="contacto">Contacto</a>
+  </nav>
+</header>
+
+<main>
+  <!-- HOME: imagen que ocupa mitad horizontal desde header -->
+  <section id="home" class="page active">
+    <div class="hero">
+      <div class="hero-img" aria-hidden="true"></div> <!-- imagen a la izquierda ocupa 50% -->
+      <div class="hero-space"></div>                  <!-- espacio vacío a la derecha -->
+    </div>
+
+    <!-- línea de acento color #b4767f -->
+    <div class="accent-line"></div>
+
+    <!-- Productos destacados (se mantienen) -->
+    <h2>Productos destacados</h2>
+    <div class="products" id="homeProducts">
+      <article class="card" data-id="p1" data-name="Galleta chispas" data-price="900" data-img-src="img/choco-chip.jpeg">
+        <div class="card-img" style="background-image:url('img/choco-chip.jpeg')"></div>
+        <h3>Galleta chispas</h3>
+        <p>Suave por dentro, crujiente por fuera, con trozos de chocolate derretido.</p>
+        <div class="price">$900</div>
+      </article>
+
+      <article class="card" data-id="p2" data-name="Galleta Oreo" data-price="1100" data-img-src="img/oreo.jpeg">
+        <div class="card-img" style="background-image:url('img/oreo.jpeg')"></div>
+        <h3>Galleta Oreo</h3>
+        <p>Dos galletas crujientes con un relleno cremoso: un clásico irresistible.</p>
+        <div class="price">$1100</div>
+      </article>
+
+      <article class="card" data-id="p3" data-name="Galleta Red Velvet" data-price="1300" data-img-src="img/red-velvet.jpeg">
+        <div class="card-img" style="background-image:url('img/red-velvet.jpeg')"></div>
+        <h3>Galleta Red Velvet</h3>
+        <p>Textura suave, color intenso y un toque de queso crema. Amor en cada mordida.</p>
+        <div class="price">$1300</div>
+      </article>
+    </div>
+
+  </section>
+
+  <!-- QUIENES: aquí puse Bienvenidos y Por qué elegirnos y el equipo -->
+  <section id="quienes" class="page">
+    <h2>Bienvenidos a KUKYSS</h2>
+    <p>Somos una empresa fundada en octubre de 2025 en Estación Central. Galletas artesanales, ingredientes naturales y un compromiso: transformar el minuto del té en un recuerdo.</p>
+
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="three-cols reasons">
+      <div><strong>Ingredientes</strong><p>Solo naturales, sin conservantes.</p></div>
+      <div><strong>Artesanal</strong><p>Proceso manual, sabor único en cada unidad.</p></div>
+      <div><strong>Cercanía</strong><p>Atención personalizada y pedidos locales.</p></div>
+    </div>
+
+    <h3>Equipo y roles</h3>
+    <ul>
+      <li><strong>Yeraldo Díaz</strong> — Producción y recetas (Panadero jefe)</li>
+      <li><strong>Fabián Ruiz</strong> — Desarrollo web y soporte técnico</li>
+      <li><strong>Sofía García</strong> — Gestión administrativa y RRHH</li>
+      <li><strong>Stefany Rondón</strong> — Marketing y redes sociales</li>
+      <li><strong>Jholyd Valeriano</strong> — Finanzas y control presupuestario</li>
+    </ul>
+
+    <h3>Organigrama (qué es y uso)</h3>
+    <p>Un organigrama muestra cómo se distribuyen las responsabilidades dentro del equipo. Aquí lo usamos para dejar claro quién responde por cada área (producción, marketing, finanzas y desarrollo web) — útil para la presentación y para evidenciar reparto de roles ante el profesor.</p>
+
+    <div class="org">
+      <div class="org-box">Dirección</div>
+      <div class="org-row">
+        <div class="org-box">Producción (Yeraldo)</div>
+        <div class="org-box">Marketing (Stefany)</div>
+        <div class="org-box">Finanzas (Jholyd)</div>
+        <div class="org-box">Programación (Fabián & Yeraldo)</div>
+      </div>
+    </div>
+
+    <h3>Seguridad e higiene</h3>
+    <ul>
+      <li>Uso de EPP (guantes, gorros)</li>
+      <li>Limpieza y sanitización diaria</li>
+      <li>Capacitación en manipulación de alimentos</li>
+    </ul>
+  </section>
+
+  <!-- FINANZAS -->
+  <section id="finanzas" class="page">
+    <h2>Finanzas — Resumen para producción de 50 galletas</h2>
+    <p>Plan de producción: <strong>50 galletas</strong>. Aporte del equipo: <strong>12.000 CLP por persona</strong> (5 personas) = <strong>60.000 CLP total</strong>.</p>
+
+    <table class="finance-table">
+      <thead>
+        <tr><th>Producto</th><th>Precio venta</th><th>Costo estimado por unidad</th><th>Margen por unidad</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Galleta chispas</td><td>$900</td><td>$350</td><td>$550</td></tr>
+        <tr><td>Galleta Oreo</td><td>$1100</td><td>$420</td><td>$680</td></tr>
+        <tr><td>Red Velvet</td><td>$1300</td><td>$480</td><td>$820</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Costos y uso del aporte</h3>
+    <ul>
+      <li>Aporte total del equipo: <strong>$60.000 CLP</strong></li>
+      <li>Costos variables estimados (producción de 50 unidades, costo promedio por unidad ~ $417): <strong>$20.850 CLP</strong></li>
+      <li>Resto del aporte (empaque, transporte y marketing inicial): <strong>$39.150 CLP</strong></li>
+    </ul>
+
+    <h3>Punto de equilibrio — explicación práctica</h3>
+    <p>Fórmula: <strong>Punto de equilibrio = Costos fijos / (Precio - Costo variable por unidad)</strong></p>
+    <p>Ejemplo práctico: si tienes <em>costos fijos</em> (empaque + marketing) = $30.000 CLP, vendes galletas a $1.000 y el costo variable promedio por galleta es $417, entonces:</p>
+    <p><strong>30.000 / (1.000 - 417) ≈ 30.000 / 583 ≈ 52 unidades</strong>. Es decir, necesitas vender ~52 galletas para cubrir costos fijos en ese escenario. Este cálculo te sirve para planificar cuántas vender en la feria.</p>
+
+    <h3>Métodos de pago</h3>
+    <ul>
+      <li>Transferencia bancaria</li>
+      <li>Pago en efectivo</li>
+      <li>MercadoPago / Webpay (pendiente integración)</li>
+    </ul>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section id="productos" class="page">
+    <h2>Nuestros productos</h2>
+    <p>En KUKYSS elaboramos cada galleta con dedicación. Aquí puedes añadir al carrito los productos disponibles.</p>
+    <div class="products" id="products">
+      <article class="card" data-id="p1" data-name="Galleta chispas" data-price="900" data-img-src="img/choco-chip.jpeg">
+        <div class="card-img" style="background-image:url('img/choco-chip.jpeg')"></div>
+        <h3>Galleta chispas</h3>
+        <p>Suave por dentro, crujiente por fuera.</p>
+        <div class="price">$900</div>
+        <button class="add">Agregar al carrito</button>
+      </article>
+
+      <article class="card" data-id="p2" data-name="Galleta Oreo" data-price="1100" data-img-src="img/oreo.jpeg">
+        <div class="card-img" style="background-image:url('img/oreo.jpeg')"></div>
+        <h3>Galleta Oreo</h3>
+        <p>Clásica y deliciosa.</p>
+        <div class="price">$1100</div>
+        <button class="add">Agregar al carrito</button>
+      </article>
+
+      <article class="card" data-id="p3" data-name="Galleta Red Velvet" data-price="1300" data-img-src="img/red-velvet.jpeg">
+        <div class="card-img" style="background-image:url('img/red-velvet.jpeg')"></div>
+        <h3>Galleta Red Velvet</h3>
+        <p>Textura suave y color intenso.</p>
+        <div class="price">$1300</div>
+        <button class="add">Agregar al carrito</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACTO + ENCUESTA -->
+  <section id="contacto" class="page">
+    <h2>Contacto</h2>
+    <p>Escríbenos y te responderemos en menos de 48 horas.</p>
+
+    <form id="contactForm">
+      <label>Nombre <input type="text" id="contactName" required></label>
+      <label>Email <input type="email" id="contactEmail" required></label>
+      <label>Mensaje <textarea id="contactMsg" rows="4" required></textarea></label>
+      <button type="submit">Enviar</button>
+    </form>
+    <div id="contactMsgBox" aria-live="polite"></div>
+
+    <h3>Encuesta rápida (opcional)</h3>
+    <form id="surveyForm">
+      <fieldset>
+        <legend>¿Qué ocasión te parece ideal para regalar Kukyss?</legend>
+        <label><input type="radio" name="ocasion" value="Cumpleaños" required> Cumpleaños</label><br>
+        <label><input type="radio" name="ocasion" value="Celebraciones familiares"> Celebraciones familiares</label><br>
+        <label><input type="radio" name="ocasion" value="Regalos corporativos"> Regalos corporativos</label><br>
+        <label><input type="radio" name="ocasion" value="Detalles románticos"> Detalles románticos</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>¿Pagarías más por un producto artesanal?</legend>
+        <label><input type="radio" name="mas" value="Si" required> Sí</label>
+        <label><input type="radio" name="mas" value="No"> No</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>¿Qué sabores prefieres?</legend>
+        <label><input type="checkbox" name="sabores" value="Chispas"> Chispas</label>
+        <label><input type="checkbox" name="sabores" value="Oreo"> Oreo</label>
+        <label><input type="checkbox" name="sabores" value="Red Velvet"> Red Velvet</label>
+      </fieldset>
+
+      <button type="submit">Enviar encuesta</button>
+    </form>
+    <div id="surveyMsg" aria-live="polite"></div>
+  </section>
+</main>
+
+<!-- Panel carrito -->
+<div class="cart-panel" id="cartPanel" aria-hidden="true">
+  <h3>Tu carrito</h3>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <strong>Total:</strong>
+    <div id="cartTotal">$0</div>
+  </div>
+</div>
+
+<footer>
+  <ul>
+    <li>Teléfono: <strong>+56 9 3627 2580</strong></li>
+    <li>Email: <strong>kukysscontact@gmail.com</strong></li>
+    <li>Dirección: <strong>Av. Ecuador 4626, Estación Central</strong></li>
+  </ul>
+  <small>© KUKYSS — 2025</small>
+</footer>
+
+<!-- 🎵 AUDIO -->
+<audio id="bg-audio" src="audio/background-music.mp3" loop preload="none"></audio>
+<button id="playMusicBtn">🔊 Reproducir música</button>
+
+<!-- Scripts -->
+<script src="js/script.js"></script>
+</body>
+</html>
