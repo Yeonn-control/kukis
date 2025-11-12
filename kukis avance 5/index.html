@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KUKYSS — Inicio</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <!-- menu botón -->
+  <button id="menuBtn" aria-label="Abrir menú" class="menu-btn" aria-expanded="false">☰</button>
+
+  <!-- Título centrado -->
+  <div class="header-center">
+    <h1>Bienvenidos</h1>
+    <div id="slogan">Galleta perfecta para cada momento</div>
+  </div>
+
+  <!-- Logo + carrito a la derecha -->
+  <div class="header-right">
+    <div class="cart-btn" id="cartBtn" title="Abrir carrito" aria-label="Abrir carrito" aria-haspopup="true" aria-controls="cartPanel">
+      🛒 <span class="visually-hidden">Carrito</span> <span class="cart-count" id="cartCount">0</span>
+    </div>
+    <img src="img/logo.jpeg" alt="Logo de KUKYSS" class="logo-img">
+  </div>
+
+  <!-- Navegación (oculta por defecto; se abre con el botón) -->
+  <nav id="navMenu" class="nav-menu" aria-hidden="true">
+    <a href="#" data-target="home" class="active">Inicio</a>
+    <a href="#" data-target="quienes">Quiénes somos</a>
+    <a href="#" data-target="finanzas">Finanzas</a>
+    <a href="#" data-target="productos">Productos</a>
+    <a href="#" data-target="contacto">Contacto</a>
+  </nav>
+</header>
+
+<!-- HERO full-bleed -->
+<section class="hero" aria-hidden="true">
+  <div class="hero-img" role="img" aria-label="Banner de KUKYSS"></div>
+</section>
+
+<!-- accent line -->
+<div class="accent-line" aria-hidden="true"></div>
+
+<main>
+  <!-- HOME -->
+  <section id="home" class="page active">
+    <div class="container">
+      <h2>Productos destacados</h2>
+
+      <!-- Home highlight: banner (50%) + productos (50%) -->
+      <div class="home-highlight">
+        <div class="home-banner">
+          <img src="img/top-banner.png" alt="Banner destacada de KUKYSS" class="home-banner-img">
+        </div>
+
+        <div class="home-products-wrap">
+          <div class="products" id="homeProducts">
+            <article class="card" data-id="p1" data-name="Galleta chispas" data-price="1000" data-img-src="img/choco-chip.jpeg">
+              <div class="card-img" style="background-image:url('img/choco-chip.jpeg')"></div>
+              <h3>Galleta chispas</h3>
+              <p>Suave por dentro, crujiente por fuera, con trozos de chocolate derretido.</p>
+              <div class="price">$1000</div>
+            </article>
+
+            <article class="card" data-id="p2" data-name="Galleta Oreo" data-price="1500" data-img-src="img/oreo.jpeg">
+              <div class="card-img" style="background-image:url('img/oreo.jpeg')"></div>
+              <h3>Galleta Oreo</h3>
+              <p>Dos galletas crujientes con un relleno cremoso: un clásico irresistible.</p>
+              <div class="price">$1500</div>
+            </article>
+
+            <article class="card" data-id="p3" data-name="Galleta Red Velvet" data-price="1300" data-img-src="img/red-velvet.jpeg">
+              <div class="card-img" style="background-image:url('img/red-velvet.jpeg')"></div>
+              <h3>Galleta Red Velvet</h3>
+              <p>Textura suave, color intenso y un toque de queso crema.</p>
+              <div class="price">$1300</div>
+            </article>
+
+            <!-- Nuevo producto: Galletas Navideñas (aparece en inicio; no agrega al carrito desde productos) -->
+            <article class="card" data-id="p4" data-name="Galletas Navideñas" data-price="1400" data-img-src="img/GalletasNavidenias.jpeg">
+              <div class="card-img" style="background-image:url('img/GalletasNavidenias.jpg')"></div>
+              <h3>Galletas Navideñas</h3>
+              <p>Edición especial con especias y glaseado, ideal para regalar en fiestas.</p>
+              <div class="price">$1400</div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- QUIENES -->
+  <section id="quienes" class="page">
+    <div class="container">
+      <h2>Bienvenidos a KUKYSS</h2>
+      <p>Somos una empresa fundada en octubre de 2025 en Estación Central. Galletas artesanales, ingredientes naturales y un compromiso: transformar el minuto del té en un recuerdo.</p>
+
+      <h2>¿Por qué elegirnos?</h2>
+      <div class="three-cols reasons">
+        <div><strong>Ingredientes</strong><p>Solo naturales, sin conservantes.</p></div>
+        <div><strong>Artesanal</strong><p>Proceso manual, sabor único en cada unidad.</p></div>
+        <div><strong>Cercanía</strong><p>Atención personalizada y pedidos locales.</p></div>
+      </div>
+
+      <h3>Equipo y roles</h3>
+      <ul>
+        <li><strong>Fabián Ruiz</strong> — Producción y recetas (Panadero jefe)</li>
+        <li><strong>Yeraldo Díaz</strong> — Desarrollo web y soporte técnico</li>
+        <li><strong>Sofía García</strong> — Gestión administrativa y RRHH</li>
+        <li><strong>Stefany Rondón</strong> — Marketing y redes sociales</li>
+        <li><strong>Jholyd Valeriano</strong> — Finanzas y control presupuestario</li>
+      </ul>
+
+      <h3>Seguridad e higiene</h3>
+      <ul>
+        <li>Uso de EPP (guantes, gorros)</li>
+        <li>Limpieza y sanitización diaria</li>
+        <li>Capacitación en manipulación de alimentos</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FINANZAS (imagen cargada dinámicamente) -->
+  <section id="finanzas" class="page">
+    <div class="container">
+      <h2>Finanzas — Resumen para producción de 50 galletas</h2>
+      <p>Plan de producción: <strong>50 galletas</strong>. Aporte del equipo: <strong>12.000 CLP por persona</strong> (5 personas) = <strong>60.000 CLP total</strong>.</p>
+
+      <div class="finance-image-box" aria-live="polite">
+        <a id="financeLink" href="#" download title="Descargar imagen de finanzas">
+          <img id="financeImg" src="" alt="Imagen de resumen financiero - finanzas" />
+        </a>
+        <!-- Cambia data-base si renombras la imagen (ej: data-base="finanzas_v2") -->
+        <div id="financeLoader" data-base="finanzas" style="display:none"></div>
+      </div>
+
+      <!-- Hecho: detalle textual de costos eliminado según solicitud del usuario. -->
+
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section id="productos" class="page">
+    <div class="container">
+      <h2>Nuestros productos</h2>
+      <p>En KUKYSS elaboramos cada galleta con dedicación. Aquí puedes añadir al carrito los productos disponibles.</p>
+      <div class="products" id="products">
+        <article class="card" data-id="p1" data-name="Galleta chispas" data-price="1000" data-img-src="img/choco-chip.jpeg">
+          <div class="card-img" style="background-image:url('img/choco-chip.jpeg')"></div>
+          <h3>Galleta chispas</h3>
+          <p>Suave por dentro, crujiente por fuera.</p>
+          <div class="price">$1000</div>
+          <button class="add">Agregar al carrito</button>
+        </article>
+
+        <article class="card" data-id="p2" data-name="Galleta Oreo" data-price="1500" data-img-src="img/oreo.jpeg">
+          <div class="card-img" style="background-image:url('img/oreo.jpeg')"></div>
+          <h3>Galleta Oreo</h3>
+          <p>Clásica y deliciosa.</p>
+          <div class="price">$1500</div>
+          <button class="add">Agregar al carrito</button>
+        </article>
+
+        <article class="card" data-id="p3" data-name="Galleta Red Velvet" data-price="1300" data-img-src="img/red-velvet.jpeg">
+          <div class="card-img" style="background-image:url('img/red-velvet.jpeg')"></div>
+          <h3>Galleta Red Velvet</h3>
+          <p>Textura suave y color intenso.</p>
+          <div class="price">$1300</div>
+          <button class="add">Agregar al carrito</button>
+        </article>
+
+        <!-- Producto especial: botón deshabilitado con texto "Próximamente" -->
+        <article class="card" data-id="p4" data-name="Galletas Navideñas" data-price="1400" data-img-src="img/GalletasNavidenias.jpeg">
+          <div class="card-img" style="background-image:url('img/GalletasNavidenias.jpg')"></div>
+          <h3>Galletas Navideñas</h3>
+          <p>Edición limitada: especias navideñas y glaseado festivo.</p>
+          <div class="price">$1400</div>
+          <button class="add" disabled title="Producto próximamente">Próximamente</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO + ENCUESTA -->
+  <section id="contacto" class="page">
+    <div class="container">
+      <h2>Contacto</h2>
+      <p>Escríbenos y te responderemos en menos de 48 horas.</p>
+
+      <form id="contactForm" class="contact-grid" aria-label="Formulario de contacto">
+        <div class="field">
+          <label for="contactName">Nombre</label>
+          <input type="text" id="contactName" required>
+        </div>
+        <div class="field">
+          <label for="contactEmail">Email</label>
+          <input type="email" id="contactEmail" required>
+        </div>
+        <div class="field full">
+          <label for="contactMsg">Mensaje</label>
+          <textarea id="contactMsg" rows="5" required></textarea>
+        </div>
+        <div class="field full center">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+      <div id="contactMsgBox" aria-live="polite"></div>
+
+      <h3>Encuesta rápida (opcional)</h3>
+      <div class="survey-box">
+        <form id="surveyForm" aria-label="Encuesta Kukyss">
+          <fieldset>
+            <legend>¿Qué ocasión te parece ideal para regalar Kukyss?</legend>
+            <label><input type="radio" name="ocasion" value="Cumpleaños" required> Cumpleaños</label>
+            <label><input type="radio" name="ocasion" value="Celebraciones familiares"> Celebraciones familiares</label>
+            <label><input type="radio" name="ocasion" value="Regalos corporativos"> Regalos corporativos</label>
+            <label><input type="radio" name="ocasion" value="Detalles románticos"> Detalles románticos</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>¿Pagarías más por un producto artesanal?</legend>
+            <label><input type="radio" name="mas" value="Si" required> Sí</label>
+            <label><input type="radio" name="mas" value="No"> No</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>¿Qué sabores prefieres?</legend>
+            <label><input type="checkbox" name="sabores" value="Chispas"> Chispas</label>
+            <label><input type="checkbox" name="sabores" value="Oreo"> Oreo</label>
+            <label><input type="checkbox" name="sabores" value="Red Velvet"> Red Velvet</label>
+            <label><input type="checkbox" name="sabores" value="Navideñas"> Navideñas</label>
+          </fieldset>
+
+          <button type="submit">Enviar encuesta</button>
+        </form>
+        <div id="surveyMsg" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Panel carrito -->
+<div class="cart-panel" id="cartPanel" aria-hidden="true">
+  <h3>Tu carrito</h3>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <strong>Total:</strong>
+    <div id="cartTotal">$0</div>
+  </div>
+
+  <div class="cart-actions">
+    <button id="checkoutBtn" class="checkout-btn">Finalizar compra</button>
+    <div id="orderMsg" class="order-msg" aria-live="polite"></div>
+  </div>
+</div>
+
+<footer>
+  <ul>
+    <li>Teléfono: <strong>+56 9 3627 2580</strong></li>
+    <li>Email: <strong>kukysscontact@gmail.com</strong></li>
+    <li>Dirección: <strong>Av. Ecuador 4626, Estación Central</strong></li>
+  </ul>
+  <small>© KUKYSS — 2025</small>
+</footer>
+
+<!-- Scripts -->
+<script src="js/script.js"></script>
+</body>
+</html>
